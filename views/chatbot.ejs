@@ -1,0 +1,35 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+  <title>Chatbot</title>
+  <script>
+  async function sendMessage() {
+    const userMessage = document.getElementById("userMessage").value;
+
+    const res = await fetch("/chatbot", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ message: userMessage })
+});
+const data = await res.json(); // ✅ now real JSON
+
+
+    const chatArea = document.getElementById("chatArea");
+    chatArea.innerHTML += "<p><b>You:</b> " + userMessage + "</p>";
+    chatArea.innerHTML += "<p><b>Bot:</b> " + data.reply + "</p>";
+
+    // clear input after sending
+    document.getElementById("userMessage").value = "";
+    chatArea.scrollTop = chatArea.scrollHeight; // auto scroll
+  }
+  </script>
+</head>
+<body>
+  <h1>Chat with AI</h1>
+  <div id="chatArea" style="border:1px solid #ccc; padding:10px; height:300px; overflow:auto;"></div>
+  <input type="text" id="userMessage" placeholder="Type a message..." />
+  <a href="https://chatgpt.com/?model=auto">
+    <button>Send</button>
+  </a>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr.Mine!</title>
+  <link rel="stylesheet" href="/stylesheets/home.css">
+  <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="quote_container">
+        <p>"Find joy in the journey"</p>
+      </div>
+    </div>
+
+    <nav>   
+      <div class="logo">
+        <img src="/images/black-icon.png" alt="" />
+      </div>
+      <div class="right">
+        <h4 > <a href="#">Home</a></h4>
+        <h4> <a href="/profile/<%=user%>"> Profile</a></h4>
+      </div>
+    </nav>
+
+    <div class="container">
+      <a href="/chatbot/<%=user%>">
+      <div class="box" id="AI">
+        <div class="up">
+          <h2>AI-buddy</h2>
+        </div>
+        <div class="down">
+          <img src="images/ai2.png" alt="AI img" />
+        </div>
+      </div>
+    </a>
+
+      <a href="/meditation/<%=user%>">
+      <div class="box" id="Meditation">
+        <div class="up">
+          <h2>Relaxation</h2>
+        </div>
+        <div class="down">
+          <img src="images/medi2.png" alt="Meditation img" />
+        </div>
+      </div>
+    </a>
+
+    <a href="/music/<%=user%>">
+      <div class="box" id="music">
+        <div class="up">
+          <h2>Music</h2>
+        </div>
+        <div class="down">
+          <img src="images/music2.png" alt="Music img" />
+        </div>
+      </div>
+    </a>
+
+      <a href="/book/<%=user%>">
+      <div class="box" id="books">
+        <div class="up">
+          <h2>Books</h2>
+        </div>
+        <div class="down">
+          <img src="images/book.png" alt="books img" />
+        </div>
+      </div>
+    </a>
+
+      <a href="/journal/<%=user%>">
+      <div class="box" id="journal">
+        <div class="up">
+          <h2>Journal</h2>
+        </div>
+        <div class="down">
+          <img src="images/journal.png" alt="Journal img" />
+        </div>
+      </div>
+    </a>
+
+      <a href="/movie/<%=user%>">
+      <div class="box" id="movie">
+        <div class="up">
+          <h2>Movie</h2>
+        </div>
+        <div class="down">
+          <img src="images/movie.png" alt="AI img" />
+        </div>
+      </div>
+    </a>
+
+    </div>
+
+    <div id="s1">
+      <img src="/images/home/sun.png" class="img1">
+    </div>
+    <div id="b1">
+      <img src="/images/home/b1.png" class="img">
+    </div>
+    <div id="b2">
+      <img src="/images/home/b2.png" class="img1">
+    </div>
+    <div id="b3">
+      <img src="/images/home/b3.png" class="img">
+    </div>
+    <div id="c1" class="cloud">
+      <img src="/images/home/c1.png" alt="" class="img">
+    </div>
+    <div id="c2" class="cloud">
+      <img src="/images/home/c2.png" alt="" class="img">
+    </div>
+    <div id="c3" class="cloud">
+      <img src="/images/home/c3.png" alt="" class="img1">
+    </div>
+    <div id="c4" class="cloud">
+      <img src="/images/home/c4.png" alt="" class="img">
+    </div>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="javascripts/home.js"></script>

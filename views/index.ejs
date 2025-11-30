@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Mine!</title>
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="stylesheets/index.css" />
+  </head>
+  <body onload="getCurrentMood()">
+    <div id="page1">
+      <div class="main">
+        <h1>How are you feeling now?</h1>
+        <div class="emoji">
+          <!-- happy -->
+
+          <a href="/mood_update/happy/<%=user%>">
+            <picture id="happy">
+              <source
+                srcset="
+                  https://fonts.gstatic.com/s/e/notoemoji/latest/1f970/512.webp
+                "
+                type="image/webp"
+              />
+              <img
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f970/512.gif"
+                alt="🥰"
+                width="50"
+                height="50"
+              />
+            </picture>
+          </a>
+          <!-- Joyful -->
+
+          <a href="/mood_update/joyful/<%=user%>">
+            <picture id="joyful">
+              <source
+                srcset="
+                  https://fonts.gstatic.com/s/e/notoemoji/latest/1f603/512.webp
+                "
+                type="image/webp"
+              />
+              <img
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f603/512.gif"
+                alt="😃"
+                width="50"
+                height="50"
+              />
+            </picture>
+          </a>
+          <!-- angry -->
+
+          <a href="/mood_update/angry/<%=user%>">
+            <picture id="angry">
+              <source
+                srcset="
+                  https://fonts.gstatic.com/s/e/notoemoji/latest/1f621/512.webp
+                "
+                type="image/webp"
+              />
+              <img
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f621/512.gif"
+                alt="😡"
+                width="50"
+                height="50"
+              />
+            </picture>
+          </a>
+
+          <!-- sad -->
+
+          <a href="/mood_update/sad/<%=user%>">
+            <picture id="sad">
+              <source
+                srcset="
+                  https://fonts.gstatic.com/s/e/notoemoji/latest/1f614/512.webp
+                "
+                type="image/webp"
+              />
+              <img
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f614/512.gif"
+                alt="😔"
+                width="50"
+                height="50"
+              />
+            </picture>
+          </a>
+
+          <!-- depress -->
+
+          <a href="/mood_update/depress/<%=user%>">
+            <picture id="depress">
+              <source
+                srcset="
+                  https://fonts.gstatic.com/s/e/notoemoji/latest/1f97a/512.webp
+                "
+                type="image/webp"
+              />
+              <img
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f97a/512.gif"
+                alt="🥺"
+                width="50"
+                height="50"
+              />
+            </picture>
+          </a>
+        </div>
+
+
+
+        <p id="mood"></p>
+        <div class="bottom">
+          <a id="update" href="/mood_update">
+            <span id="start">Let's Explore</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="/javascripts/index.js"></script>

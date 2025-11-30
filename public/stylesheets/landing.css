@@ -1,0 +1,230 @@
+/* ========== 1. Imports & Variables ========== */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap");
+
+:root {
+  --primary: #FD772B;
+  --primary-dark: #c85b1f;
+  --text-dark: #2c3e50;
+  --text-light: #555;
+  --bg-color: #f4f4f4;
+  --transition-fast: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ========== 2. Reset & Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ========== 3. Typography ========== */
+h1 {
+  font-size: 4rem;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h1 span {
+  color: var(--text-dark);
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ========== 4. Layout ========== */
+main {
+  padding-top: 80px; /* Accommodates fixed nav */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4em 5%;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  z-index: 2;
+}
+
+/* ========== 5. Components ========== */
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s;
+  box-shadow: 0 4px 15px rgba(253, 119, 43, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ========== 6. Navigation ========== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.right {
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.3em 1em;
+  border-radius: 30px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 50%;
+  transition: all var(--transition-slow);
+  z-index: -1;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:hover::before {
+  bottom: 0;
+  border-radius: 30px;
+}
+
+/* ========== 7. Spline Viewer ========== */
+.spline-container {
+  flex: 1;
+  min-height: 500px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+spline-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+
+/* ========== 8. Responsive ========== */
+@media (max-width: 992px) {
+  .hero {
+    justify-content: center;
+  }
+  
+  .content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 2em;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .content {
+    margin-bottom: 2rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  .spline-container {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.8em 1em;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .spline-container {
+    min-height: 300px;
+  }
+}

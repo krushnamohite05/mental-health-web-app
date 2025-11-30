@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Mine!</title>
+    <link rel="stylesheet" href="/stylesheets/journal.css" />
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon" />
+
+  </head>
+  <body>
+    <div id="page1">
+    <nav>
+      <div class="logo">
+        <img src="/images/black-icon.png" alt="img" />
+      </div>
+      <div class="right">
+        <h4><a href="/logout"> Log out</a></h4>
+        <h4><a href="/profile/<%=userID%>"> Profile</a></h4>
+      </div>
+    </nav>
+
+    <div class="heading">
+      <img src="/images/journal/1.png" alt="">
+      <h1 id="head">Journal</h1>
+      <p id="sub-head">Make Your Own Space</p>
+    </div>
+    <div class="container-entry">
+      <form action="/add-entry/<%=userID%>" method="post">
+        <div id="title">
+          <input type="text" name="title" placeholder="Title" required />
+        </div>
+
+        <div id="content">
+          <textarea
+            name="content"
+            placeholder="Write more..."
+            required
+            
+          ></textarea>
+        </div>
+
+        <div class="add-note">
+          <input type="submit" name="submit" value="Add note" />
+        </div>
+      </form>
+    </div>
+    <div id="img2" class="img">
+      <img src="/images/journal/2.png" alt="">
+    </div>
+    <div id="img3" class="img">
+      <img src="/images/journal/3.png" alt="">
+    </div>
+    <div id="img4" class="img">
+      <img src="/images/journal/4.png" alt="">
+    </div>
+</div>
+
+<div id="page2">
+    <h2>My Journal</h2>
+    <ul>
+
+      <% user.notes.forEach(note => { %>
+        <li>
+          <h3 class="title"><%= note.title %></h3>
+          <p class="content" ><%= note.desc %></p>
+          <p class="date"><strong>Edited</strong> <%= note.timestamp.toLocaleTimeString() %></p>
+        </li>
+        <% }); %>
+    </ul>
+
+
+  </div>
+  </body>
+</html>

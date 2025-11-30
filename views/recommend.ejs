@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mine!</title>
+ <link rel="stylesheet" href="/stylesheets/recommend.css">
+ <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="/images/black-icon.png" alt="img" />
+      </div>
+      <div class="right">
+        <h4><a href="/logout"> Log out</a></h4>
+        <h4><a href="/profile/<%=user%>"> Profile</a></h4>
+      </div>
+    </nav>
+
+    <h1><%= title %></h1>
+    <p>Listen to your heart</p>
+    <div id="img1" class="img">
+      <img src="/images/<%=folder%>/1.png" alt="">
+    </div>
+    <div id="img2" class="img">
+      <img src="/images/<%=folder%>/2.png" alt="">
+    </div>
+    <div id="img3" class="img">
+      <img src="/images/<%=folder%>/3.png" alt="">
+    </div>
+    <ul>
+      <% items.forEach(function(item) { %>
+      <li>
+        <p onclick="copyToClipboard(this.textContent)"><%= item %></p>
+      </li>
+      <% }); %>
+    </ul>
+    <div id="refresh" class="img" onclick="load()">
+      <img src="/images/recommend/refresh.png" alt="">
+    </div>
+  </body>
+</html>
+
+<script>
+function load(){
+  window.location.reload()
+}
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        alert("Text copied to clipboard: " + text);
+      })
+      .catch((error) => {
+        console.error("Failed to copy text: ", error);
+      });
+  }
+</script>

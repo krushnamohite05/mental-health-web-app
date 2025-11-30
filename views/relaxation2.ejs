@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mine!</title>
+    <link rel="stylesheet" href="/stylesheets/relaxation2.css">
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="/video/<%=folder%>/bg.mp4" type="video/mp4">
+      </video>
+      <nav>   
+        <div class="logo">
+          <img id="shuffle" data-folder="<%=folder%>" src="/images/logo.png" alt="" />
+        </div>
+        <div class="right">
+          <img onclick="m1()" src="/images/relaxation2/shuffle.png" alt="">
+          <h4 class="shadow" ><a href="/meditation/<%=user%>">Home</a></h4>
+        </div>
+      </nav>
+</body>
+</html>
+
+<script src="/javascripts/relaxation2.js"></script>

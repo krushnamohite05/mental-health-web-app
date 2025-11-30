@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mine!</title>
+    <link rel="stylesheet" href="/stylesheets/relaxation.css">
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="/video/default.mp4" type="video/mp4">
+      </video>
+    <div id="main">
+        <nav>   
+            <div class="logo">
+              <img src="/images/logo.png" alt="" />
+            </div>
+            <div class="right">
+              <h4 class="shadow" ><a href="/meditation/<%=user%>">Home</a></h4>
+            </div>
+          </nav>
+          <div id="card-container" class="card-container">
+
+              <div data-music="m1.m4a" data-video="m1.mp4" class="card">
+                <img src="/images/<%=img_src[0]%>" alt="1">
+                  <div class="card-content">
+                      <p>Deep Ocean.</p>
+                    </div>
+                </div>
+
+              <div data-music="m2.m4a" data-video="m2.mp4" class="card">
+                <img src="/images/<%=img_src[1]%>" alt="1">
+                  <div class="card-content">
+                      <p>Wavy Mountains.</p>
+                    </div>
+                </div>
+              <div data-music="m3.m4a" data-video="m3.mp4" class="card">
+                <img src="/images/<%=img_src[2]%>" alt="1">
+                  <div class="card-content">
+                      <p>Forest.</p>
+                    </div>
+                </div>
+              <div data-music="m4.m4a" data-video="m4.mp4" class="card">
+                <img src="/images/<%=img_src[3]%>" alt="1">
+                  <div class="card-content">
+                      <p>Night Sky.</p>
+                    </div>
+                </div>
+              <div data-music="m5.m4a" data-video="m5.mp4" class="card">
+                <img src="/images/<%=img_src[4]%>" alt="1">
+                  <div class="card-content">
+                      <p>Sea Waves.</p>
+                    </div>
+                </div>
+              <div data-music="m6.m4a" data-video="m6.mp4" class="card">
+                <img src="/images/<%=img_src[5]%>" alt="1">
+                  <div class="card-content">
+                      <p>Rain.</p>
+                    </div>
+                </div>
+
+            </div>
+            <audio id="music-player" src="" controls></audio>
+    </div>
+</body>
+</html>
+<script>
+
+</script>
+
+<script src="/javascripts/relaxation.js"></script>
