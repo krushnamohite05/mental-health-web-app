@@ -217,7 +217,7 @@ router.get("/relaxation2/:user/:folder",function(req,res){
   const foldername=req.params.folder;
   console.log(foldername)
   if (userID) {
-    res.render("relaxation2", { user: userID,folder:foldername});
+    res.render("relaxation2", { user: userID});
   } else {
     res.redirect("/login");
   }
