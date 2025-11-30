@@ -10,7 +10,7 @@ cardContainer.addEventListener("click", (event) => {
   const clickedCard = event.target.closest('.card');
   if (clickedCard) {
     const musicFile = clickedCard.getAttribute('data-music');
-    const musicPath = `https://sidhharth-bucket-for-project.s3.ap-south-1.amazonaws.com/audio/${musicFile}`;
+    const musicPath = `/audio/${musicFile}`;
 
     if (currentMusic === musicPath) {
       if (musicPlayer.paused) {
